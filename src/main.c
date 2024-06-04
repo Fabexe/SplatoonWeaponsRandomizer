@@ -84,18 +84,6 @@ void menuLoop() {
     gRectTitre.h = 30;
     SDL_FreeSurface(gSurfaceTitre);
 
-    // Chargement des images
-    SDL_Texture* gTextureImages[WEAPONS_NBS];
-    for (int i = 0; i < WEAPONS_NBS; ++i) {
-        char filename[133];
-        sprintf(filename, "weapon%d.png", i+1);
-        gTextureImages[i] = IMG_LoadTexture(gRenderer, filename);
-        if (gTextureImages[i] == NULL) {
-            printf("Failed to load image %d! SDL_Error: %s\n", i, SDL_GetError());
-            return 1;
-        }
-    }
-
     // Chargement des sons
     Mix_Music* gMusicReload = Mix_LoadMUS("sounds/select.mp3");
 
