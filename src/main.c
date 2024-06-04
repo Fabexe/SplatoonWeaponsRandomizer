@@ -6,8 +6,6 @@
 #include <SDL_ttf.h>
 #include <SDL_mixer.h>
 
-#define WEAPONS_NBS
-
 SDL_Window* gWindow = NULL;
 SDL_Renderer* gRenderer = NULL;
 
